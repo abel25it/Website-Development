@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Pizzeriaa | Order</title>
+    <link rel="canonical" href="order.html">
+    <meta name="description" content="Order luxury Italian pizza online from La Pizzeriaa with live totals, rewards, and premium checkout flow.">
+    <meta name="theme-color" content="#fff2df" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#120d0b" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/svg+xml" href="images/contact-pizza.svg">
+    <meta property="og:site_name" content="La Pizzeriaa">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="La Pizzeriaa | Order">
+    <meta property="og:description" content="Premium pizza checkout with rewards, coupons, and refined order control.">
+    <meta property="og:image" content="images/pizzus.jpg">
+    <meta property="og:url" content="order.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="La Pizzeriaa | Order">
+    <meta name="twitter:description" content="Premium pizza checkout with rewards, coupons, and refined order control.">
+    <meta name="twitter:image" content="images/pizzus.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-shape bg-shape-1"></div>
+    <div class="bg-shape bg-shape-2"></div>
+
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="logo" href="index.html">La Pizzeriaa</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a class="active" href="order.html">Order</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">Dark mode</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section-heading">
+            <p class="eyebrow">Your Cart</p>
+            <h1>Signature Checkout</h1>
+            <p class="lead">An elevated premium order experience with luxury in every feel.</p>
+        </section>
+
+        <section class="hero hero-split">
+            <div class="hero-copy">
+                <div class="hero-badge">Fast Checkout</div>
+                <p class="eyebrow">Order Summary</p>
+                <h1>Complete Your Pizza Order</h1>
+                <p class="lead">Review your selections, adjust quantities with ease, and complete the journey with a premium finish.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-secondary" href="menu.html">Back to Menu</a>
+                    <button id="clear-order" class="btn btn-primary" type="button">Clear Order</button>
+                </div>
+                <div class="reward-mini card reward-mini-compact">
+                    <p class="eyebrow">Rewards Boost</p>
+                    <h2>One Small Panel, All the Rewards</h2>
+                    <p class="lead">Spin daily, claim referral points, and save birthday offers without crowding the checkout.</p>
+                    <div class="reward-stat-inline">
+                        <span>Current Points</span>
+                        <strong data-loyalty-points>0</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-panel">
+                <img src="images/pizzus.jpg" alt="Dining area at La Pizzeriaa">
+                <div class="hero-panel-content">
+                    <p class="eyebrow">Live Kitchen Time</p>
+                    <h2>Estimated Prep: <span id="prep-time-mins">0</span> Minutes</h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="cards two-up order-layout">
+            <article class="card">
+                <p class="eyebrow">Current Items</p>
+                <h2>Your Cart</h2>
+                <div id="order-items" class="order-items"></div>
+                <p id="order-empty" class="price-note">Your order is empty. Add pizzas from the menu.</p>
+            </article>
+
+            <article class="card checkout-card">
+                <p class="eyebrow">Finish Order</p>
+                <h2>Checkout</h2>
+                <p class="order-total">Subtotal: <span id="order-subtotal">₹0</span></p>
+                <p class="order-total order-final">Final Total: <span id="order-total">₹0</span></p>
+                <p class="reward-status" data-loyalty-coupon-status>No coupon active yet.</p>
+                <div class="reward-progress-mini">
+                    <div class="reward-progress-head">
+                        <span>Tier: <strong data-loyalty-tier>Starter</strong></span>
+                        <span>Orders: <strong data-loyalty-orders>0</strong></span>
+                    </div>
+                    <div class="reward-progress-bar">
+                        <div class="reward-progress-fill" data-loyalty-progress></div>
+                    </div>
+                    <p class="reward-perk" data-loyalty-perks>Earn points on every order.</p>
+                </div>
+                <div class="reward-tool reward-tool-wide reward-tool-slim">
+                    <p class="eyebrow">Rewards Hub</p>
+                    <h3>Spin, Birthday, Referral</h3>
+                    <p class="reward-note">Use the compact hub below to unlock extras without cluttering checkout.</p>
+                    <div class="rewards-tools rewards-tools-slim">
+                        <article class="reward-tool reward-tool-mini">
+                            <p class="eyebrow">Daily Spin</p>
+                            <button class="btn btn-primary reward-action" id="spin-reward-btn" type="button">Spin Now</button>
+                            <p class="reward-status" data-loyalty-spin-status>Spin daily for bonuses.</p>
+                        </article>
+                        <article class="reward-tool reward-tool-mini birthday-card">
+                            <p class="eyebrow">Birthday</p>
+                            <input class="reward-input" id="birthday-input" type="date" aria-label="Birthday date">
+                            <button class="btn btn-secondary reward-action" id="birthday-save-btn" type="button">Save Birthday</button>
+                            <p class="reward-status" data-loyalty-birthday-status>Add your birthday for a surprise bonus.</p>
+                        </article>
+                        <article class="reward-tool reward-tool-mini referral-card">
+                            <p class="eyebrow">Referral</p>
+                            <div class="reward-code-row reward-code-row-compact">
+                                <strong class="reward-code" data-loyalty-referral-code>LP-XXXXXX</strong>
+                                <button class="btn btn-secondary reward-copy-btn" id="copy-referral-btn" type="button">Copy</button>
+                            </div>
+                            <p class="reward-status" data-loyalty-referral-status>Use a friend referral code for bonus points.</p>
+                        </article>
+                    </div>
+                </div>
+                <div class="reward-tool reward-tool-wide reward-tool-slim">
+                    <p class="eyebrow">Coupon Code</p>
+                    <h3>Apply A Reward Code</h3>
+                    <div class="reward-form-row reward-form-row-compact">
+                        <input class="reward-input" id="coupon-input" type="text" placeholder="Enter coupon code" aria-label="Coupon code">
+                        <button class="btn btn-secondary reward-action" id="coupon-apply-btn" type="button">Apply</button>
+                    </div>
+                    <button class="btn btn-primary reward-action" id="coupon-auto-btn" type="button">Auto Apply Best Offer</button>
+                    <details class="coupon-offer-menu" aria-label="Offer menu">
+                        <summary>Offer Menu</summary>
+                        <div class="coupon-offers" aria-label="Available coupon offers">
+                            <button class="coupon-offer-btn" type="button" data-coupon-code="NEW10">NEW10 - 10% off for new customers above ₹999</button>
+                            <button class="coupon-offer-btn" type="button" data-coupon-code="PIZZA10">PIZZA10 - 5% off above ₹999</button>
+                            <button class="coupon-offer-btn" type="button" data-coupon-code="CHEESE50">CHEESE50 - ₹80 off above ₹1199</button>
+                            <button class="coupon-offer-btn" type="button" data-coupon-code="FEAST20">FEAST20 - 10% off up to ₹250 above ₹1699</button>
+                        </div>
+                    </details>
+                    <p class="reward-status" data-loyalty-coupon-savings>Apply a code to unlock savings.</p>
+                </div>
+                <form id="checkout-form" class="reservation-form" action="#" method="post">
+                    <label for="customer-name">Name</label>
+                    <input id="customer-name" name="customer-name" type="text" required>
+
+                    <label for="customer-phone">Phone</label>
+                    <input id="customer-phone" name="customer-phone" type="tel" required>
+
+                    <label for="customer-address">Delivery Address</label>
+                    <textarea id="customer-address" name="customer-address" rows="4" required></textarea>
+
+                    <button class="btn btn-primary" type="submit">Place Order</button>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>La Pizzeriaa • Inspired by Vito Iacopelli • Fresh Pizza Delivered Fast</p>
+        </div>
+    </footer>
+
+    <script src="auth.js"></script>
+    <script src="cart-count.js"></script>
+    <script src="loyalty.js"></script>
+    <script src="chatbot.js"></script>
+    <script src="order-page.js"></script>
+    <script src="theme-toggle.js"></script>
+</body>
+</html>

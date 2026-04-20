@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Pizzeriaa | Contact</title>
+    <link rel="canonical" href="contact.html">
+    <meta name="description" content="Contact La Pizzeriaa for reservations, support, and order assistance through call, WhatsApp, or message form.">
+    <meta name="theme-color" content="#fff2df" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#120d0b" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/svg+xml" href="images/contact-pizza.svg">
+    <meta property="og:site_name" content="La Pizzeriaa">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="La Pizzeriaa | Contact">
+    <meta property="og:description" content="Reserve a table, ask a question, or reach support quickly.">
+    <meta property="og:image" content="images/pizzus.jpg">
+    <meta property="og:url" content="contact.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="La Pizzeriaa | Contact">
+    <meta name="twitter:description" content="Reserve a table, ask a question, or reach support quickly.">
+    <meta name="twitter:image" content="images/pizzus.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-shape bg-shape-1"></div>
+    <div class="bg-shape bg-shape-2"></div>
+
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="logo" href="index.html">La Pizzeriaa</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a class="active" href="contact.html">Contact</a></li>
+                    <li><a href="order.html">Order</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">Dark mode</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section-heading">
+            <p class="eyebrow">Talk To Us</p>
+            <h1>Support, Booking, and Complaints Made Easy</h1>
+            <p class="lead">Quick help through WhatsApp or call, plus a clear path for reservations and complaints.</p>
+        </section>
+
+        <section class="hero hero-split">
+            <div class="hero-copy">
+                <div class="hero-badge">Reserve Tonight</div>
+                <p class="eyebrow">Reserve & Visit</p>
+                <h1>Contact Us</h1>
+                <p class="lead">Planning dinner with friends or family? Reach us directly and we will save your table.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#reservation-form">Reserve Now</a>
+                    <a class="btn btn-secondary" href="menu.html">Browse Menu</a>
+                </div>
+            </div>
+            <div class="hero-panel">
+                <img src="images/pizzus.jpg" alt="Freshly baked pizza on wooden board">
+                <div class="hero-panel-content">
+                    <p class="eyebrow">Open Daily</p>
+                    <h2>24 Roma Street</h2>
+                    <p class="lead">Dinner service, late-night slices, and relaxed reservations all week long.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cards two-up">
+            <article class="contact-box">
+                <h2>Contact Channels</h2>
+                <p class="lead">For quick help, use WhatsApp or call. For formal complaints, email our support desk.</p>
+                <img class="section-image" src="images/Pizzeria pic.jpg" alt="Exterior of La Pizzeriaa restaurant">
+                <ul class="contact-list">
+                    <li><strong>Call:</strong> +22 123 456 789</li>
+                    <li><strong>WhatsApp:</strong> +22 123 456 789</li>
+                    <li><strong>Complaints Email:</strong> complaints@lafornoitaliano.com</li>
+                    <li><strong>Address:</strong>24 Roma Street, Mumbai</li>
+                    <li><strong>Opening Hours:</strong> Mon-Sun, 11:00 AM - 11:00 PM</li>
+                </ul>
+            </article>
+
+            <article class="contact-box" id="reservation-form">
+                <h2>Reservation Form</h2>
+                <form class="reservation-form" action="#" method="post">
+                    <label for="full-name">Full Name</label>
+                    <input id="full-name" name="full-name" type="text" required>
+
+                    <label for="whatsapp">WhatsApp Number</label>
+                    <input id="whatsapp" name="whatsapp" type="tel" required>
+
+                    <label for="phone">Phone Number</label>
+                    <input id="phone" name="phone" type="tel" required>
+
+                    <label for="guests">Guests</label>
+                    <select id="guests" name="guests" required>
+                        <option value="" selected disabled>Select number of guests</option>
+                        <option value="2">2 Guests</option>
+                        <option value="4">4 Guests</option>
+                        <option value="6">6 Guests</option>
+                        <option value="8">8 Guests</option>
+                        <option value="10+">10+ Guests</option>
+                    </select>
+
+                    <label for="date">Date</label>
+                    <input id="date" name="date" type="date" required>
+
+                    <label for="time">Time</label>
+                    <input id="time" name="time" type="time" required>
+
+                    <label for="notes">Special Requests</label>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Allergies, birthday setup, seating preference..."></textarea>
+
+                    <button class="btn btn-primary" type="submit">Reserve Table</button>
+                </form>
+            </article>
+        </section>
+
+        <section class="cards two-up">
+            <article class="card">
+                <p class="eyebrow">Support Center</p>
+                <h2>Refund Help</h2>
+                <p class="lead">If your order arrives late, incorrect, or damaged, we are here to help.</p><br>
+                <ul class="contact-list">
+                    <li><strong>Step 1:</strong> Contact us within 24 hours of delivery.</li>
+                    <li><strong>Step 2:</strong> Share your order name, phone number, and issue details on call or message us on WhatsApp.</li>
+                    <li><strong>Step 3:</strong> Provide a photo on WhatsApp if the item is damaged or incorrect.</li>
+                    <li><strong>Resolution Time:</strong> Refund requests are completed within 1-2 business days.</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <p class="eyebrow">Policy</p>
+                <h2>Refund & Complaints</h2>
+                <ul class="contact-list">
+                    <li><strong>Eligible:</strong> Wrong item, missing item, damaged order, or failed delivery.</li>
+                    <li><strong>Not Eligible:</strong> Change of mind after successful preparation and delivery.</li>
+                    <li><strong>Call:</strong> +91 1234567890</li>
+                    <li><strong>Complaints Email:</strong> complaints@lafornoitaliano.com</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>La Pizzeriaa • Inspired by Vito Iacopelli • We Can't Wait to Serve You</p>
+        </div>
+    </footer>
+    <script src="auth.js"></script>
+    <script src="cart-count.js"></script>
+    <script src="chatbot.js"></script>
+    <script src="theme-toggle.js"></script>
+</body>
+</html>

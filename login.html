@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Pizzeriaa | Login</title>
+    <link rel="canonical" href="login.html">
+    <meta name="description" content="Log in to La Pizzeriaa to secure your rewards, apply offers, and complete premium pizza checkout.">
+    <meta name="theme-color" content="#fff2df" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#120d0b" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/svg+xml" href="images/contact-pizza.svg">
+    <meta property="og:site_name" content="La Pizzeriaa">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:title" content="La Pizzeriaa | Login">
+    <meta property="og:description" content="Sign in to unlock reward points, saved offers, and faster checkout.">
+    <meta property="og:image" content="images/pizzus.jpg">
+    <meta property="og:url" content="login.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="La Pizzeriaa | Login">
+    <meta name="twitter:description" content="Sign in to unlock reward points, saved offers, and faster checkout.">
+    <meta name="twitter:image" content="images/pizzus.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-shape bg-shape-1"></div>
+    <div class="bg-shape bg-shape-2"></div>
+
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="logo" href="index.html">La Pizzeriaa</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="order.html">Order</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">Dark mode</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section-heading">
+            <p class="eyebrow">Secure Access</p>
+            <h1>Login To Order & Unlock Rewards</h1>
+            <p class="lead">You need to log in before placing orders or claiming loyalty points and rewards.</p>
+        </section>
+
+        <section class="cards two-up">
+            <article class="card">
+                <p class="eyebrow">Why Login</p>
+                <h2>Keep Your Rewards Safe</h2>
+                <p class="lead">Your points, coupons, and referral rewards are tied to your login profile so they stay linked to you.</p>
+            </article>
+
+            <article class="contact-box">
+                <h2>Login</h2>
+                <form id="login-form" class="reservation-form" action="#" method="post">
+                    <label for="login-name">Name</label>
+                    <input id="login-name" name="login-name" type="text" required>
+
+                    <label for="login-phone">Phone Number</label>
+                    <input id="login-phone" name="login-phone" type="tel" required>
+
+                    <button class="btn btn-secondary" id="send-otp-btn" type="button">Send OTP</button>
+
+                    <div id="login-otp-wrap" hidden>
+                        <label for="login-otp">OTP</label>
+                        <input id="login-otp" name="login-otp" type="text" inputmode="numeric" maxlength="6" placeholder="Enter 6-digit OTP" required>
+                    </div>
+
+                    <p id="login-status" class="price-note">Click Send OTP, then verify to continue.</p>
+
+                    <button class="btn btn-primary" type="submit">Verify & Continue</button>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>La Pizzeriaa • Inspired by Vito Iacopelli • Login Once, Enjoy Every Slice</p>
+        </div>
+    </footer>
+
+    <script src="auth.js"></script>
+    <script src="theme-toggle.js"></script>
+</body>
+</html>
